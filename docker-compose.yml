@@ -8,7 +8,7 @@ volumes:
 
 services:
   comms-server:
-    image: decentraland/katalyst:${DOCKER_TAG:-latest}
+    image: satyrn/telesto-katalyst:${DOCKER_TAG:-latest}
     working_dir: /app
     command: comms
     env_file:
@@ -89,7 +89,7 @@ services:
       options: { tag: node-exporter }
 
   content-server:
-    image: decentraland/katalyst:${DOCKER_TAG:-latest}
+    image: satyrn/telesto-katalyst:${DOCKER_TAG:-latest}
     working_dir: /app
     command: content
     environment:
@@ -112,7 +112,7 @@ services:
       options: { tag: content-server }
 
   lambdas:
-    image: decentraland/katalyst:${DOCKER_TAG:-latest}
+    image: satyrn/telesto-katalyst:${DOCKER_TAG:-latest}
     working_dir: /app
     command: lambdas
     restart: always
